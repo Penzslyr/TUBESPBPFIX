@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "588673275715",
+    "project_id": "tubespbp-5dd21",
+    "storage_bucket": "tubespbp-5dd21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588673275715:android:de079e27103a8d210041f6",
+        "android_client_info": {
+          "package_name": "com.example.tubespbp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588673275715-cecpj89hhc0b2nnkunc2c3rj0il7bgs3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMMQT4kFwT-Ruv_tHywfdK3l6HTFUlKSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588673275715-cecpj89hhc0b2nnkunc2c3rj0il7bgs3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

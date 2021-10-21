@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navbargate"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.tubespbp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="com.example.tubespbp.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_SearchFragment_to_InformationFragment2"
+            app:destination="@id/InformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/InformationFragment"
+        android:name="com.example.tubespbp.InformationFragment"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information" >
+        <argument
+            android:name="datahotel"
+            app:argType="com.example.tubespbp.DataHotel"
+            app:nullable="true" />
+    </fragment>
+
+
+</navigation>
