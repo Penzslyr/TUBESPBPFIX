@@ -1,7 +1,11 @@
 package com.example.tubespbp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +21,7 @@ public class informasihotel extends AppCompatActivity {
     private TextView nama;
     private TextView nik;
     private TextView alamat;
+    private Button btnConfirm;
 
 
     @Override
@@ -31,10 +36,19 @@ public class informasihotel extends AppCompatActivity {
         textView2 = findViewById(R.id.nokamar);
         textView3 = findViewById(R.id.total);
         dataPengguna = userPref.getUserData();
+        btnConfirm = findViewById(R.id.btnConfirm);
 
         nama.setText(dataPengguna.getNama());
         nik.setText(dataPengguna.getNIK());
         alamat.setText(dataPengguna.getAlamat());
+        btnConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                userPref.logout();
+                Toast.makeText(informasihotel.this, "Baiii Baiii", Toast.LENGTH_SHORT).show();
+                checkFilled();
+            }
+        });
         getIncomingExtra();
     }
 
@@ -52,5 +66,13 @@ public class informasihotel extends AppCompatActivity {
         textView.setText(namahotel);
         textView2.setText(nokamar);
         textView3.setText(total);
+    }
+
+    private void checkFilled(){
+        if(!userPref.checkFilled()){
+            startActivity(new Intent(informasihotel.this, InputActivity.class));
+        }else{
+            Toast.makeText(informasihotel.this, "Welcome back !",Toast.LENGTH_SHORT).show();
+        }
     }
 }

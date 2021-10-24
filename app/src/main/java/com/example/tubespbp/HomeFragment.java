@@ -202,13 +202,7 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback, Permis
 
 //                                Point.fromLngLat(110.414614,-10.780661);
 // Set the destination location to the Plaza del Triunfo in Granada, Spain.
-                            destination = Point.fromLngLat(110.414614,-7.780661);
-                            initSource(style);
 
-                            initLayers(style);
-
-// Get the directions route from the Mapbox Directions API
-                            getRoute(mapboxMap, origin, destination);
                         }
 
 // Set the origin location to the Alhambra landmark in Granada, Spain.

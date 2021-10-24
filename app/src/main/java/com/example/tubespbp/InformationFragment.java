@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -89,6 +90,7 @@ public class InformationFragment extends Fragment{
         nama.setText(dataPengguna.getNama());
         nik.setText(dataPengguna.getNIK());
         alamat.setText(dataPengguna.getAlamat());
+
         return view;
     }
 

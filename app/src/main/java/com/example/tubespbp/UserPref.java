@@ -1,6 +1,7 @@
 package com.example.tubespbp;
 import android.content.Context;
 import android.content.SharedPreferences;
+
 public class UserPref {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -47,4 +48,11 @@ public class UserPref {
 //        mengembalikan nilai isLogin jika sudah login otomatis nilai true jika tidak mereturn false
         return sharedPreferences.getBoolean(IS_FILLED,false);
     }
+
+    public void logout(){
+        editor.clear();
+        editor.commit();
+        editor.clear();
+    }
+
 }
