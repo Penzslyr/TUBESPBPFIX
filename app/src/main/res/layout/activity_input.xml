@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
+        android:fontFamily="@font/playfair_display_bold"
         android:text="Masukkan Data Diri"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -24,9 +25,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:fontFamily="@font/nunito_sans_light"
         android:text="Informasi ini akan membantu anda  untuk melakukan reservasi hotel"
         android:textAlignment="center"
-        android:textSize="15dp"
+        android:textSize="10dp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -97,11 +99,19 @@
         app:layout_constraintStart_toStartOf="@+id/nomor"
         app:layout_constraintTop_toBottomOf="@+id/nomor">
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:text="Clear"/>
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSubmit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Submit"/>
+
     </LinearLayout>
 
 

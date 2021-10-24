@@ -89,6 +89,9 @@ public class SearchFragment extends Fragment {
         dataHotelList.add(DaftarHotel.oyo4);
         dataHotelList.add(DaftarHotel.oyo5);
         dataHotelList.add(DaftarHotel.oyo6);
+        dataHotelList.add(DaftarHotel.oyo7);
+        dataHotelList.add(DaftarHotel.oyo8);
+        dataHotelList.add(DaftarHotel.oyo9);
 
         return dataHotelList;
 

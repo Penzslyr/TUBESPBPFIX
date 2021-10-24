@@ -48,12 +48,27 @@ public class RVHotelAdapter extends RecyclerView.Adapter<RVHotelAdapter.UserView
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(context, informasihotel.class);
-                intent.putExtra("nama", dataHotelList.get(position).getNamaHotel());
-                intent.putExtra("nokamar", dataHotelList.get(position).getNoKamar());
-                intent.putExtra("total", dataHotelList.get(position).getHarga());
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                builder.setTitle("CheckOut");
+                builder.setMessage("Anda akan dialihkan ke checkout menu, pastikan sudah memilih dengan benar").setPositiveButton("confirm", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(context, informasihotel.class);
+                                intent.putExtra("nama", dataHotelList.get(position).getNamaHotel());
+                                intent.putExtra("nokamar", dataHotelList.get(position).getNoKamar());
+                                intent.putExtra("total", dataHotelList.get(position).getHarga());
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                context.startActivity(intent);
+                            }
+                        }).setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                })
+                        .show();
+
+
 
 
 

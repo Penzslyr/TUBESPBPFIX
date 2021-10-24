@@ -12,7 +12,7 @@ import com.google.android.material.button.MaterialButton;
 
 public class InputActivity extends AppCompatActivity {
     private EditText nama, nik, alamat, nomor;
-    private MaterialButton btnSubmit;
+    private MaterialButton btnSubmit, btnClear;
     private UserPref userPreferences;
 
 
@@ -26,6 +26,8 @@ public class InputActivity extends AppCompatActivity {
         alamat = findViewById(R.id.alamat);
         nomor = findViewById(R.id.nomor);
         btnSubmit = findViewById(R.id.btnSubmit);
+        btnClear = findViewById(R.id.btnClear);
+
         checkFilled();
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +38,20 @@ public class InputActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                nama.setText("");
+                nik.setText("");
+                alamat.setText("");
+                nomor.setText("");
+                Toast.makeText(InputActivity.this, "Text berhasil dihapus", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
     private boolean validateForm(){
         if(nama.getText().toString().trim().isEmpty() || nik.getText().toString().trim().isEmpty() || alamat.getText().toString().trim().isEmpty() || nomor.getText().toString().trim().isEmpty()){

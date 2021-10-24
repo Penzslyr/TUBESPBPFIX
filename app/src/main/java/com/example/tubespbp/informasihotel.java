@@ -46,7 +46,9 @@ public class informasihotel extends AppCompatActivity {
             public void onClick(View view) {
                 userPref.logout();
                 Toast.makeText(informasihotel.this, "Baiii Baiii", Toast.LENGTH_SHORT).show();
+
                 checkFilled();
+
             }
         });
         getIncomingExtra();

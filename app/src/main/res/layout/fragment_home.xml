@@ -19,15 +19,24 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_gravity=""
+            android:layout_gravity="center"
             android:layout_marginTop="40dp"
+            android:fontFamily="@font/playfair_display_bold"
             android:gravity="center_horizontal|top"
             android:text="Welcome"
             android:textColor="@color/black"
-            android:textSize="50sp"
+            android:textSize="40sp"
             mapbox:layout_constraintEnd_toEndOf="parent"
             mapbox:layout_constraintStart_toStartOf="parent"
             mapbox:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/welcome1"
+            android:layout_width="match_parent"
+            android:layout_height="27sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/nunito_sans_light"
+            mapbox:layout_constraintTop_toBottomOf="@+id/welcome" />
 
         <TextView
             android:id="@+id/anda_sedang"

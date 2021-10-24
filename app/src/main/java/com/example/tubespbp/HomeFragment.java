@@ -54,6 +54,8 @@ import com.mapbox.mapboxsdk.style.layers.SymbolLayer;
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
 import com.mapbox.mapboxsdk.utils.BitmapUtils;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 import retrofit2.Call;
@@ -134,10 +136,14 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback, Permis
         userPref = new UserPref(getContext());
         dataPengguna = userPref.getUserData();
         checkFilled();
+
         Mapbox.getInstance(getActivity(), getString(R.string.mapbox_access_token));
 
         View layout = inflater.inflate(R.layout.fragment_home, container, false);
         mapView = layout.findViewById(R.id.mapView);
+        TextView textView = layout.findViewById(R.id.welcome1);
+        String user = dataPengguna.getNama();
+        textView.setText("Selamat datang, " +user);
         mapView.onCreate(savedInstanceState);
 
 
