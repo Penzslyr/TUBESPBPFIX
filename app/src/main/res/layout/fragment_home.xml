@@ -8,56 +8,53 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="238dp"
-        android:layout_height="43dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="71dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="17dp"
-        android:layout_gravity=""
-        android:text="Welcome"
-        android:textSize="40sp"
-        android:textColor="@color/black"
-        android:gravity="center_horizontal|top"
-        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
-    <TextView
-        android:id="@+id/selamat_dat"
-        android:layout_width="228dp"
-        android:layout_height="27dp"
-        android:layout_below="@id/welcome"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="66dp"
-        android:layout_marginTop="86dp"
-        android:gravity="center_horizontal|top"
-        android:text="Selamat datang"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity=""
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal|top"
+            android:text="Welcome"
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            mapbox:layout_constraintEnd_toEndOf="parent"
+            mapbox:layout_constraintStart_toStartOf="parent"
+            mapbox:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/anda_sedang"
-        android:layout_width="146dp"
-        android:layout_height="13dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="139dp"
-        android:gravity="center_horizontal|top"
-        android:text="Anda sedang berada di :" />
+        <TextView
+            android:id="@+id/anda_sedang"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal|top"
+            android:text="Anda sedang berada di :"
+            mapbox:layout_constraintStart_toStartOf="parent"
+            mapbox:layout_constraintTop_toBottomOf="@+id/welcome" />
 
-    <com.mapbox.mapboxsdk.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="219dp"
-        android:layout_height="348dp"
-        android:layout_gravity="center"
-        mapbox:mapbox_cameraTargetLat="40.73581"
-        mapbox:mapbox_cameraTargetLng="73.99155"
-        mapbox:mapbox_cameraZoom="11"
-        />
+        <com.mapbox.mapboxsdk.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="271dp"
+            android:layout_height="417dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            mapbox:layout_constraintEnd_toEndOf="parent"
+            mapbox:layout_constraintStart_toStartOf="parent"
+            mapbox:layout_constraintTop_toBottomOf="@+id/anda_sedang"
+            mapbox:mapbox_cameraTargetLat="40.73581"
+            mapbox:mapbox_cameraTargetLng="73.99155"
+            mapbox:mapbox_cameraZoom="11" />
 
 
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

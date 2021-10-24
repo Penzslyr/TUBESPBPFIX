@@ -11,11 +11,11 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:text="Informasi"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,13 +25,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="70dp"
         app:cardBackgroundColor="#E4E0E8"
         app:cardCornerRadius="8dp"
         app:cardElevation="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="133dp">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -45,7 +46,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Nama"
-                android:text="@{pst.tanggal}"
+                android:textSize="8pt"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -55,7 +58,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:hint="NIK"
-                android:text="@{pst.tanggal}"
+                android:textSize="8pt"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/nama" />
@@ -66,7 +71,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:hint="Alamat"
-                android:text="@{pst.tanggal}"
+                android:textSize="8pt"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/nik" />
@@ -77,7 +84,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:hint="Nama Hotel"
-                android:text="@{pst.tanggal}"
+                android:textSize="8pt"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/alamat" />
@@ -88,7 +98,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:hint="Nomor Kamar"
-                android:text="@{pst.tanggal}"
+                android:textSize="8pt"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/namahotel" />
@@ -99,7 +111,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:hint="Total Harga"
-                android:text="@{pst.tanggal}"
+                android:textSize="8pt"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/nokamar" />
